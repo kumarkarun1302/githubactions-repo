@@ -19,6 +19,7 @@ jobs:
         run: npm test
 
   deploy:
+    runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh command in target server
       - uses: appleboy/ssh-action@main
