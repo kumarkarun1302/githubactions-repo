@@ -17,7 +17,7 @@ jobs:
         run: npm install
   deploy:
     name: Deploy to EC2 on master branch
-    depends: build
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
