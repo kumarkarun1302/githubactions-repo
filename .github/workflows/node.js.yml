@@ -17,13 +17,3 @@ jobs:
         run: npm install
       - name: Run test
         run: npm test
-
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: executing remote ssh command in target server
-      - uses: appleboy/ssh-action@main
-        with:
-         host: 13.232.231.15
-         username: ubuntu
-         key: ${{ secrets.SSH_PRIVATE_KEY }}
